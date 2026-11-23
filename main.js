@@ -224,9 +224,66 @@ ______________________________
 while — цикл, що перевіряє умову перед кожним виконанням.
 do...while — цикл, що виконує тіло хоча б раз, перевіряючи умову після.*/
 
-let count = 10;
+/*let count = 10;
 do {
  console.log(count);
  count--;
 } while (count >= 0);
 
+
+const totalPages = 8
+const currentPage = 3
+
+for (let i = 1; i <= totalPages; i++) {
+  if (i === currentPage) {
+    console.log(`Сторінка ${i} ви тут`);
+  } else {
+    console.log(`Сторінка ${i}`);
+  }
+}*/
+/*_______________________________________
+_________________________________________
+const rating = 0;
+const maxRating = 5;
+let result = "";
+
+for (let i = 1; i <= maxRating; i++) {
+  if (i <= rating) {
+    result += "★";
+  } else {
+    result += "☆";
+  }
+}
+console.log(result);*/
+
+/*_____________________________________________
+_______________________________________________
+
+const maxAttempts = 5;
+const successAttempt = 3;
+let attempt = 1;
+let isLoaded = false;
+
+do {
+  if (attempt === successAttempt) {
+    console.log(`Спроба ${attempt}:дані завантаженно`);
+    isLoaded = true;
+    break;
+  }
+  console.log(`Спроба ${attempt}:Виникла помилка, спробуйте ще раз`);
+  attempt++;
+} while (attempt <= maxAttempts);
+if (!isLoaded) {
+  console.log("сервер не доступний, спробуйте пізніше");
+}
+*/
+const openHour = 10;
+const closeHour = 15;
+const breakHour = 12;
+
+for (let hour = openHour; hour < closeHour; hour++) {
+  if (hour === breakHour) {
+    continue;
+  }
+  console.log(`${hour}:00 — вільно`);
+}
