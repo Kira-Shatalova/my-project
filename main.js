@@ -276,7 +276,7 @@ do {
 if (!isLoaded) {
   console.log("сервер не доступний, спробуйте пізніше");
 }
-*/
+
 const openHour = 10;
 const closeHour = 15;
 const breakHour = 12;
@@ -286,4 +286,33 @@ for (let hour = openHour; hour < closeHour; hour++) {
     continue;
   }
   console.log(`${hour}:00 — вільно`);
+}*/
+
+/*_____________________________________
+Редагування;
+статті;
+______________________________________*/
+const isLoggedIn = true;
+const isBanned = true;
+const isAuthor = false;
+const isAdmin = true;
+
+if (isLoggedIn && !isBanned && (isAuthor || isAdmin)) {
+  console.log("Можна редагувати");
+} else {
+  console.log("Заборонено");
 }
+
+/*____________________________
+чай кофе
+______________________________*/
+
+const likesCoffee = "coffee";
+const likesTea = "tea";
+
+let chosenDrink;
+
+do {
+  chosenDrink = prompt("'What would you like to drink: tea or coffee?");
+} while (chosenDrink !== likesCoffee && chosenDrink !== likesTea);
+console.log(`Your order: ${chosenDrink}. Thank you!`);
